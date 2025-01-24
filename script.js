@@ -4,10 +4,16 @@ document.addEventListener("DOMContentLoaded", () => {
 const form = document.getElementById("registration-form").addEventListener('submit', function (event) {
     event.preventDefault()
 } );
-const feedbackDiv = document.getElementById("form-feedback");
+const feedbackDiv = document.getElementById("form-feedback").style.display = "block";
 const username = document.getElementById('username').value.trim();
 const email= document.getElementById('email').value.trim();
 const password = document.getElementById('password').value.trim();
+
+if (isvalid != false) {
+    feedbackDiv.document.getElementById('form-feedback').textContent = "Registration successfull!";
+    feedbackDiv.document.getElementById('form-feedback').style.display = "#28a745";
+}
+
 const isvalid = true;
 const message = [];
 if (username.length < 3) {
