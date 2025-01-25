@@ -14,29 +14,29 @@ if (isvalid != false) {
     feedbackDiv.document.getElementById('form-feedback').style.display = "#28a745";
 }
 
-const isvalid = true;
-const message = [];
+const isValid = true;
+const messages = [];
 if (username.length < 3) {
-    isvalid == false;
-    message.push('give a user name');
+    isValid == false;
+    messages.push('give a user name');
 };
-console.log(message);
+console.log(messages);
 
 if (!email.includes('@') && includes('.')) {
-    isvalid == false;
-    message.push('your email is required');
+    isValid == false;
+    messages.push('your email is required');
 };
 console.log(message);
 if (password.length >= 8) {
-    isvalid = false;
-    message.push('password must be more than 8 characters');
+    isValid = false;
+    messages.push('password must be more than 8 characters');
 }
 console.log(message);
-if (isvalid) {
+if (isValid) {
     feedbackDiv.textContent = "Registration-succesfull!";
     feedbackDiv.style.color = "#28a745";
 
 } else {
-    feedbackDiv.innerHtml = message.join("<br>");
+    feedbackDiv.innerHtml = messages.join("<br>");
     feedbackDiv.style.color = "#dc3545";
 }
