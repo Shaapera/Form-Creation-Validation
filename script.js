@@ -32,3 +32,11 @@ if (password.length >= 8) {
     message.push('password must be more than 8 characters');
 }
 console.log(message);
+if (isvalid) {
+    feedbackDiv.textContent = "Registration-succesfull!";
+    feedbackDiv.style.color = "#28a745";
+
+} else {
+    feedbackDiv.innerHtml = message.join("<br>");
+    feedbackDiv.style.color = "#dc3545";
+}
